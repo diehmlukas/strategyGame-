@@ -1,31 +1,16 @@
 package Objects.Entities;
 
-import Logic.*;
+public interface Entity {
 
-public abstract class Entity {
-    private int id;
-    private int energy;
-    private XY xy;
+    void updateEnergy(int delta);
 
-    protected void updateEnergy(int delta) {
+    int getEnergy();
 
-    }
+    int getID();
 
-    protected int getEnergy() {
-        return 0;
-    }
+    int getX();
 
-    protected int getID() {
-        return 0;
-    }
-
-    protected int getX() {
-        return 0;
-    }
-
-    protected int getY() {
-        return 0;
-    }
+    int getY();
 
     //FIXME: Ebenso soll es möglich sein, auf Standardweise zu entscheiden, ob zwei Objekte dieselbe Objects.Entities.Entity repräsentieren. ???
     //  Deshalb implementieren wir die für diesen Modus erforderliche Abfrage der Benutzereingabe nicht in der nextStep()-Methode von Objects.Squirrels.MasterSquirrel,

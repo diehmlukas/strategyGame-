@@ -1,35 +1,48 @@
 package Objects.Squirrels;
 
+import Logic.XY;
 import Objects.Entities.*;
 
-public class Squirrels implements MovableObjects {
+public abstract class Squirrels implements MovableObjects {
+    private int energy;
+    private int id;
+    private XY xy;
+
+    public void nextStep() {
+
+    }
+
     @Override
-    public void nextStep(int x, int y) {
-
-    }
-
     public void updateEnergy(int delta) {
-
+        energy += delta;
     }
 
+    @Override
     public int getEnergy() {
-        return 0;
+        return energy;
     }
 
+    @Override
     public int getID() {
-        return 0;
+        return id;
     }
 
+    @Override
     public int getX() {
-        return 0;
+        return xy.getX();
     }
 
+    @Override
     public int getY() {
-        return 0;
+        return xy.getY();
     }
 
     @Override
     public String toString() {
-        return "Objects.Squirrels.Objects.Squirrels{}";
+        return "Squirrels{" +
+                "energy=" + energy +
+                ", id=" + id +
+                ", xy=" + xy +
+                '}';
     }
 }

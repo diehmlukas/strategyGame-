@@ -1,5 +1,5 @@
 package Objects.Entities;
 
-public interface MovableObjects {
-    void nextStep(int x, int y);
+public interface MovableObjects extends Entity {
+    void nextStep();
 }

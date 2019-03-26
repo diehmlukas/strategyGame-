@@ -1,37 +1,49 @@
 package Objects.Plants;
 
+import Logic.XY;
 import Objects.Entities.*;
 
-public class GoodPlant extends Entity {
+public class GoodPlant implements MovableObjects {
     private final int defEnergy;
+    private int energy;
+    private final int id;
+    private XY xy;
 
-    public GoodPlant(int defEnergy) {
-        this.defEnergy = defEnergy;
+    public GoodPlant(int id, XY xy) {
+        this.defEnergy = 100;
+        this.energy = defEnergy;
+        this.id = id;
+        this.xy = xy;
+    }
+
+    @Override
+    public void nextStep() {
+
     }
 
     @Override
     public void updateEnergy(int delta) {
-
+        energy += delta;
     }
 
     @Override
     public int getEnergy() {
-        return 0;
+        return energy;
     }
 
     @Override
     public int getID() {
-        return 0;
+        return id;
     }
 
     @Override
     public int getX() {
-        return 0;
+        return xy.getX();
     }
 
     @Override
     public int getY() {
-        return 0;
+        return xy.getY();
     }
 
     @Override
