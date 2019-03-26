@@ -43,57 +43,125 @@ public class EntitySet {
         }
     }
 
-    //TODO: complete remaining classes
     public void addEntity(GoodBeast goodBeast) {
-        entities.add(goodBeast);
+            int goodBeastsArrayCount = 0;
+            try {
+                while (goodBeasts[goodBeastsArrayCount] != null)
+                    goodBeastsArrayCount++;
+                goodBeasts[goodBeastsArrayCount] = goodBeast;
+            }
+            catch (ArrayIndexOutOfBoundsException a){
+                System.out.println("Too many good beats! Your new beast has been ignored.");
+            }
     }
 
     public void addEntity(BadPlant badPlant) {
-        entities.add(badPlant);
+        int badPlantArrayCount = 0;
+        try {
+            while (badPlant[badPlantArrayCount] != null)
+                badPlantArrayCount++;
+            badPlant[badPlantArrayCount] = badPlant;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many bad plant! Your new beast has been ignored.");
+        }
     }
 
     public void addEntity(GoodPlant goodPlant) {
-        entities.add(goodPlant);
+        int goodPlantArrayCount = 0;
+        try {
+            while (goodPlant[goodPlantArrayCount] != null)
+                goodPlantArrayCount++;
+            goodPlant[goodPlantArrayCount] = goodPlant;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many good Plant! Your new beast has been ignored.");
+        }
     }
 
     public void addEntity(MasterSquirrel masterSquirrel) {
-        entities.add(masterSquirrel);
+        int masterSquirrelArrayCount = 0;
+        try {
+            while (masterSquirrel[masterSquirrelArrayCount] != null)
+                masterSquirrelArrayCount++;
+            masterSquirrel[masterSquirrelArrayCount] = masterSquirrel;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many master Squirrel! Your new beast has been ignored.");
+        }
     }
 
     public void addEntity(MiniSquirrel miniSquirrel) {
-        entities.add(miniSquirrel);
+        int miniSquirrelArrayCount = 0;
+        try {
+            while (miniSquirrel[miniSquirrelArrayCount] != null)
+                miniSquirrelArrayCount++;
+            miniSquirrel[miniSquirrelArrayCount] = miniSquirrel;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many mini Squirrel! Your new beast has been ignored.");
+        }
     }
 
     public void addEntity(Wall wall) {
-        entities.add(wall);
+        int wallArrayCount = 0;
+        try {
+            while (wall[wallArrayCount] != null)
+                wallArrayCount++;
+            wall[wallArrayCount] = wall;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many wall! Your new beast has been ignored.");
+        }
     }
 
     public void deleteEntity(BadBeast badBeast) {
-        entities.remove(badBeast);
+        int badBeastsArrayCount = 0;
+        while (badBeasts[badBeastsArrayCount] != badBeast)
+            badBeastsArrayCount++;
+        badBeasts[badBeastsArrayCount] = null;
     }
 
     public void deleteEntity(GoodBeast goodBeast) {
-        entities.remove(goodBeast);
+        int goodBeastArrayCount = 0;
+        while (goodBeast[goodBeastArrayCount] != goodBeast)
+            goodBeastArrayCount++;
+        goodBeast[goodBeastArrayCount] = null;
     }
 
     public void deleteEntity(BadPlant badPlant) {
-        entities.remove(badPlant);
+        int badPlantArrayCount = 0;
+        while (badPlant[badPlantArrayCount] != badPlant)
+            badPlantArrayCount++;
+        badPlant[badPlantArrayCount] = null;
     }
 
     public void deleteEntity(GoodPlant goodPlant) {
-        entities.remove(goodPlant);
+        int goodPlantArrayCount = 0;
+        while (goodPlant[goodPlantArrayCount] != goodPlant)
+            goodPlantArrayCount++;
+        goodPlant[goodPlantArrayCount] = null;
     }
 
     public void deleteEntity(MasterSquirrel masterSquirrel) {
-        entities.remove(masterSquirrel);
+        int masterSquirrelArrayCount = 0;
+        while (masterSquirrel[masterSquirrelArrayCount] != masterSquirrel)
+            masterSquirrelArrayCount++;
+        badBeasts[masterSquirrelArrayCount] = null;
     }
 
     public void deleteEntity(MiniSquirrel miniSquirrel) {
-        entities.remove(miniSquirrel);
+        int miniSquirrelArrayCount = 0;
+        while (miniSquirrel[miniSquirrelArrayCount] != miniSquirrel)
+            miniSquirrelArrayCount++;
+        miniSquirrel[miniSquirrelArrayCount] = null;
     }
 
     public void deleteEntity(Wall wall) {
-        entities.remove(wall);
+        int wallArrayCount = 0;
+        while (wall[wallArrayCount] != wall)
+            wallArrayCount++;
+        wall[wallArrayCount] = null;
     }
 
     public void callNextStep() {
