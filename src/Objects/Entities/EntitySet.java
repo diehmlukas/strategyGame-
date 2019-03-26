@@ -8,9 +8,7 @@ import Objects.Squirrels.MasterSquirrel;
 import Objects.Squirrels.MiniSquirrel;
 import Objects.Wall;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class EntitySet {
     private int arraySize;
