@@ -1,7 +1,11 @@
-public class GoodPlant implements Entity {
+package Objects;
+
+import Objects.Entities.*;
+
+public class Wall extends Entity {
     private final int defEnergy;
 
-    public GoodPlant(int defEnergy) {
+    public Wall(int defEnergy) {
         this.defEnergy = defEnergy;
     }
 
@@ -32,7 +36,7 @@ public class GoodPlant implements Entity {
 
     @Override
     public String toString() {
-        return "GoodPlant{" +
+        return "Objects.Wall{" +
                 "defEnergy=" + defEnergy +
                 '}';
     }

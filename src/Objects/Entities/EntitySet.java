@@ -1,3 +1,5 @@
+package Objects.Entities;
+
 public class EntitySet {
     //TODO: check how to use this on specific entities -> might need changes
     public void addEntity(Entity entity) {
@@ -14,6 +16,6 @@ public class EntitySet {
 
     @Override
     public String toString() {
-        return "EntitySet{}";
+        return "Objects.Entities.EntitySet{}";
     }
 }

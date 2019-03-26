@@ -1,8 +1,15 @@
-public class BadPlant implements Entity {
+package Objects.Beasts;
+
+public class BadBeast implements MovableObjects {
     private final int defEnergy;
 
-    public BadPlant(int defEnergy) {
+    public BadBeast(int defEnergy) {
         this.defEnergy = defEnergy;
+    }
+
+    @Override
+    public void nextStep(int x, int y) {
+
     }
 
     @Override
@@ -32,7 +39,7 @@ public class BadPlant implements Entity {
 
     @Override
     public String toString() {
-        return "BadPlant{" +
+        return "Objects.Beasts.BadBeast{" +
                 "defEnergy=" + defEnergy +
                 '}';
     }

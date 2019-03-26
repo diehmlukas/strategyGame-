@@ -1,13 +1,12 @@
-public class GoodBeast implements MovableObjects {
+package Objects.Plants;
+
+import Objects.Entities.*;
+
+public class GoodPlant extends Entity {
     private final int defEnergy;
 
-    public GoodBeast(int defEnergy) {
+    public GoodPlant(int defEnergy) {
         this.defEnergy = defEnergy;
-    }
-
-    @Override
-    public void nextStep(int x, int y) {
-
     }
 
     @Override
@@ -37,7 +36,7 @@ public class GoodBeast implements MovableObjects {
 
     @Override
     public String toString() {
-        return "GoodBeast{" +
+        return "Objects.Plants.GoodPlant{" +
                 "defEnergy=" + defEnergy +
                 '}';
     }

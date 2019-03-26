@@ -1,7 +1,9 @@
+package Objects.Squirrels;
+
 public class HandOperatedMasterSquirrel extends MasterSquirrel {
 
     @Override
     public String toString() {
-        return "HandOperatedMasterSquirrel{} " + super.toString();
+        return "Objects.Squirrels.HandOperatedMasterSquirrel{} " + super.toString();
     }
 }

@@ -1,3 +1,5 @@
+package Objects.Squirrels;
+
 public class MasterSquirrel extends Squirrels {
     private final int defEnergy;
 
@@ -11,7 +13,7 @@ public class MasterSquirrel extends Squirrels {
 
     @Override
     public String toString() {
-        return "MasterSquirrel{" +
+        return "Objects.Squirrels.MasterSquirrel{" +
                 "defEnergy=" + defEnergy +
                 '}' + super.toString();
     }

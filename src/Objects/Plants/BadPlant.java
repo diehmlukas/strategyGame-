@@ -1,7 +1,12 @@
-public class Squirrels implements MovableObjects {
-    @Override
-    public void nextStep(int x, int y) {
+package Objects.Plants;
 
+import Objects.Entities.*;
+
+public class BadPlant extends Entity {
+    private final int defEnergy;
+
+    public BadPlant(int defEnergy) {
+        this.defEnergy = defEnergy;
     }
 
     @Override
@@ -31,6 +36,8 @@ public class Squirrels implements MovableObjects {
 
     @Override
     public String toString() {
-        return "Squirrels{}";
+        return "Objects.Plants.BadPlant{" +
+                "defEnergy=" + defEnergy +
+                '}';
     }
 }

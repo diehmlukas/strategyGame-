@@ -1,3 +1,5 @@
+package Logic;
+
 public class XY {
     private int x;
     private int y;
@@ -18,7 +20,7 @@ public class XY {
 
     @Override
     public String toString() {
-        return "XY{" +
+        return "Logic.XY{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';
