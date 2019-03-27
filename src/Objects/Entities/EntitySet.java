@@ -117,86 +117,51 @@ public class EntitySet {
 
     public void deleteEntity(BadBeast badBeast) {
         int badBeastsArrayCount = 0;
-        try {
-            while (badBeasts[badBeastsArrayCount] != badBeast)
+            while (badBeasts[badBeastsArrayCount] != badBeast && badBeastsArrayCount < badBeasts.length)
                 badBeastsArrayCount++;
             badBeasts[badBeastsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your beast hasn't been found!");
-        }
     }
 
     public void deleteEntity(GoodBeast goodBeast) {
         int goodBeastsArrayCount = 0;
-        try {
-            while (goodBeasts[goodBeastsArrayCount] != goodBeast)
+            while (goodBeasts[goodBeastsArrayCount] != goodBeast && goodBeastsArrayCount < goodBeasts.length)
                 goodBeastsArrayCount++;
             goodBeasts[goodBeastsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your beast hasn't been found!");
-        }
     }
 
     public void deleteEntity(BadPlant badPlant) {
         int badPlantsArrayCount = 0;
-        try {
-            while (badPlants[badPlantsArrayCount] != badPlant)
+            while (badPlants[badPlantsArrayCount] != badPlant && badPlantsArrayCount < badPlants.length)
                 badPlantsArrayCount++;
             badPlants[badPlantsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your plant hasn't been found!");
-        }
     }
 
     public void deleteEntity(GoodPlant goodPlant) {
         int goodPlantsArrayCount = 0;
-        try {
-            while (goodPlants[goodPlantsArrayCount] != goodPlant)
+            while (goodPlants[goodPlantsArrayCount] != goodPlant && goodPlantsArrayCount < goodPlants.length)
                 goodPlantsArrayCount++;
             goodPlants[goodPlantsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your plant hasn't been found!");
-        }
     }
 
     public void deleteEntity(MasterSquirrel masterSquirrel) {
         int masterSquirrelsArrayCount = 0;
-        try {
-            while (masterSquirrels[masterSquirrelsArrayCount] != masterSquirrel)
+            while (masterSquirrels[masterSquirrelsArrayCount] != masterSquirrel && masterSquirrelsArrayCount < masterSquirrels.length)
                 masterSquirrelsArrayCount++;
             masterSquirrels[masterSquirrelsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your master squirrel hasn't been found!");
-        }
     }
 
     public void deleteEntity(MiniSquirrel miniSquirrel) {
         int miniSquirrelsArrayCount = 0;
-        try {
-            while (miniSquirrels[miniSquirrelsArrayCount] != miniSquirrel)
+            while (miniSquirrels[miniSquirrelsArrayCount] != miniSquirrel && miniSquirrelsArrayCount < miniSquirrels.length)
                 miniSquirrelsArrayCount++;
             miniSquirrels[miniSquirrelsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your mini squirrel hasn't been found!");
-        }
     }
 
     public void deleteEntity(Wall wall) {
         int wallsArrayCount = 0;
-        try {
-            while (walls[wallsArrayCount] != wall)
+            while (walls[wallsArrayCount] != wall && wallsArrayCount < walls.length)
                 wallsArrayCount++;
             walls[wallsArrayCount] = null;
-        }
-        catch(NullPointerException n) {
-            System.out.println("Your wall hasn't been found!");
-        }
     }
 
     public void callNextStep() {
@@ -222,5 +187,33 @@ public class EntitySet {
                 ", miniSquirrels=" + Arrays.toString(miniSquirrels) +
                 ", walls=" + Arrays.toString(walls) +
                 '}';
+    }
+
+    public MiniSquirrel[] getMiniSquirrels() {
+        return miniSquirrels;
+    }
+
+    public GoodPlant[] getGoodPlants() {
+        return goodPlants;
+    }
+
+    public BadBeast[] getBadBeasts() {
+        return badBeasts;
+    }
+
+    public BadPlant[] getBadPlants() {
+        return badPlants;
+    }
+
+    public GoodBeast[] getGoodBeasts() {
+        return goodBeasts;
+    }
+
+    public MasterSquirrel[] getMasterSquirrels() {
+        return masterSquirrels;
+    }
+
+    public Wall[] getWalls() {
+        return walls;
     }
 }

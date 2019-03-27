@@ -2,6 +2,7 @@ package Objects.Squirrels;
 
 import Logic.XY;
 import Objects.Entities.Entity;
+import Objects.Entities.EntitySet;
 
 public class MasterSquirrel extends Squirrels {
     private final int defEnergy;
@@ -16,13 +17,17 @@ public class MasterSquirrel extends Squirrels {
         this.xy = xy;
     }
 
-    public boolean isMiniSquirrel(Entity entity) {
-
+    public boolean isMiniSquirrel(Entity entity, EntitySet entitySet) {
+        for (int i = 0; i < entitySet.getMiniSquirrels().length; i++) {
+            if (entity.equals(entitySet.getMiniSquirrels()[i]))
+                return true;
+        }
+        return false;
     }
 
     @Override
     public void nextStep() {
-
+        //functionality implemented in HandOperatedMasterSquirrel
     }
 
     @Override
