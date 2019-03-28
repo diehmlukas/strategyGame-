@@ -1,16 +1,44 @@
 package Objects.Entities;
 
-public interface Entity {
+import Logic.XY;
 
-    void updateEnergy(int delta);
+public abstract class Entity {
+    private int id;
+    private int energy;
+    private XY xy;
 
-    int getEnergy();
+    public void updateEnergy(int delta) {
+        energy += delta;
+    }
 
-    int getID();
+    public int getEnergy() {
+        return energy;
+    }
 
-    int getX();
+    public int getID() {
+        return id;
+    }
 
-    int getY();
+    public XY getXy() {
+        return xy;
+    }
+
+    public void setXy(XY xy) {
+        this.xy = xy;
+    }
+
+    public void nextStep() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "energy=" + energy +
+                ", id=" + id +
+                ", xy=" + xy +
+                '}';
+    }
 
     //FIXME: Ebenso soll es möglich sein, auf Standardweise zu entscheiden, ob zwei Objekte dieselbe Objects.Entities.Entity repräsentieren. ???
     //  Deshalb implementieren wir die für diesen Modus erforderliche Abfrage der Benutzereingabe nicht in der nextStep()-Methode von Objects.Squirrels.MasterSquirrel,

@@ -1,29 +1,20 @@
 package Objects.Squirrels;
 
-import Logic.XY;
-
 public class MiniSquirrel extends Squirrels {
-    private int energy;
-    private final int id;
-    private XY xy;
+    private final int parentID;
 
-    public MiniSquirrel(int energy, int id, XY xy) {
-        this.energy = energy;
-        this.id = id;
-        this.xy = xy;
+    public MiniSquirrel(int parentID) {
+        this.parentID = parentID;
     }
 
-    @Override
-    public void nextStep(){
-
+    public int getParentID() {
+        return parentID;
     }
 
     @Override
     public String toString() {
         return "MiniSquirrel{" +
-                "energy=" + energy +
-                ", id=" + id +
-                ", xy=" + xy +
+                ", parentID=" + parentID +
                 "} " + super.toString();
     }
 }

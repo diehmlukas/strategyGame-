@@ -8,20 +8,46 @@ import Objects.Squirrels.MasterSquirrel;
 import Objects.Squirrels.MiniSquirrel;
 import Objects.Wall;
 
-import java.util.Arrays;
-
 public class EntitySet {
     private int arraySize;
-    private BadBeast[] badBeasts;
-    private GoodBeast[] goodBeasts;
-    private BadPlant[] badPlants;
-    private GoodPlant[] goodPlants;
-    private MasterSquirrel[] masterSquirrels;
-    private MiniSquirrel[] miniSquirrels;
-    private Wall[] walls;
+    private Entity[] entities;
+//    private BadBeast[] badBeasts;
+//    private GoodBeast[] goodBeasts;
+//    private BadPlant[] badPlants;
+//    private GoodPlant[] goodPlants;
+//    private MasterSquirrel[] masterSquirrels;
+//    private MiniSquirrel[] miniSquirrels;
+//    private Wall[] walls;
 
     public EntitySet() {
-        this.arraySize = 100;
+        this.arraySize = 1000;
+        entities = new Entity[arraySize];
+    }
+
+    public void addEntity(Entity entity) {
+        int count = 0;
+        try {
+            while (entities[count] != null)
+                count++;
+            entities[count] = entity;
+        }
+        catch (ArrayIndexOutOfBoundsException a){
+            System.out.println("Too many bad beats! Your new beast has been ignored.");
+        }
+    }
+
+    public void deleteEntity(Entity entity) {
+        int count = 0;
+        while (entities[count] != entity && count < entities.length)
+            count++;
+        entities[count] = null;
+    }
+
+    public Entity[] getEntities() {
+        return entities;
+    }
+
+/*
         this.badBeasts = new BadBeast[arraySize];
         this.goodBeasts = new GoodBeast[arraySize];
         this.badPlants = new BadPlant[arraySize];
@@ -216,4 +242,5 @@ public class EntitySet {
     public Wall[] getWalls() {
         return walls;
     }
+*/
 }

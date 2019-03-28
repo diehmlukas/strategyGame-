@@ -1,53 +1,18 @@
 package Objects;
 
-import Logic.XY;
-import Objects.Entities.*;
+import Objects.Entities.Entity;
 
-public class Wall implements Entity {
-    private int energy;
+public class Wall extends Entity {
     private final int defEnergy;
-    private final int id;
-    private XY xy;
 
-    public Wall(int id, XY xy) {
+    public Wall() {
         this.defEnergy = -10;
-        this.energy = defEnergy;
-        this.id = id;
-        this.xy = xy;
-    }
-
-    @Override
-    public void updateEnergy(int delta) {
-        energy += delta;
-    }
-
-    @Override
-    public int getEnergy() {
-        return energy;
-    }
-
-    @Override
-    public int getID() {
-        return id;
-    }
-
-    @Override
-    public int getX() {
-        return xy.getX();
-    }
-
-    @Override
-    public int getY() {
-        return xy.getY();
     }
 
     @Override
     public String toString() {
         return "Wall{" +
-                "energy=" + energy +
-                ", defEnergy=" + defEnergy +
-                ", id=" + id +
-                ", xy=" + xy +
-                '}';
+                "defEnergy=" + defEnergy +
+                "} " + super.toString();
     }
 }
