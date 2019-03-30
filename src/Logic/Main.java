@@ -9,5 +9,7 @@ public class Main {
         MasterSquirrel masterSquirrel1 = new MasterSquirrel();
 
         entitySet.addEntity(masterSquirrel1);
+
+        //TODO: add HandOperatedMAsterSquirrel implementation, maybe while loop ?!
     }
 }
