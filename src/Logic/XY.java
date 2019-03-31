@@ -40,48 +40,47 @@ public final class XY {
                 '}';
     }
 
-    public XY generateNewPosition(XY currentPosition) {
+    public void generateNewPosition() {
         Random rd = new Random();
-        XY out = currentPosition;
 
         while (true) {
             int rdNo = rd.nextInt(9);
 
             switch (rdNo) {
                 case 0:
-                    out.setY(currentPosition.getY() - 1);
-                    out.setX(currentPosition.getX() - 1);
+                    y--;
+                    x--;
                     break;
                 case 1:
-                    out.setY(currentPosition.getY() - 1);
+                    y--;
                     break;
                 case 2:
-                    out.setY(currentPosition.getY() - 1);
-                    out.setX(currentPosition.getX() + 1);
+                    y--;
+                    x++;
                     break;
                 case 3:
-                    out.setX(currentPosition.getX() - 1);
+                    x--;
                     break;
                 case 4:
                     break;
                 case 5:
-                    out.setX(currentPosition.getX() + 1);
+                    x++;
                     break;
                 case 6:
-                    out.setY(currentPosition.getY() + 1);
-                    out.setX(currentPosition.getX() - 1);
+                    y++;
+                    x--;
                     break;
                 case 7:
-                    out.setY(currentPosition.getY() + 1);
+                    y++;
                     break;
                 case 8:
-                    out.setY(currentPosition.getY() + 1);
-                    out.setX(currentPosition.getX() + 1);
+                    y++;
+                    x++;
                     break;
             }
 
-            if (!(out.getX() < 0 || out.getY() < 0 || out.getX() > xLength || out.getY() > yLength))
-                return out;
+            if (!(x < 0 || y < 0 || x > xLength || y > yLength))
+                return;
         }
     }
 }

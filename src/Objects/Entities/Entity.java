@@ -28,7 +28,7 @@ public abstract class Entity {
     }
 
     public void nextStep() {
-
+        xy.generateNewPosition();
     }
 
     @Override
