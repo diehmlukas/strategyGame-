@@ -6,6 +6,11 @@ public abstract class Entity {
     private int id;
     private int energy;
     private XY xy;
+    private int IDcount = 0;
+
+    public int getIDcount() {
+        return IDcount++;
+    }
 
     public void updateEnergy(int delta) {
         energy += delta;
@@ -13,6 +18,10 @@ public abstract class Entity {
 
     public int getEnergy() {
         return energy;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getID() {
@@ -40,5 +49,10 @@ public abstract class Entity {
                 '}';
     }
 
-    //TODO: Ebenso soll es möglich sein, auf Standardweise zu entscheiden, ob zwei Objekte dieselbe Objects.Entities.Entity repräsentieren. ???
+    public boolean compareEntities(Entity entity, Entity entity2) {
+        if (entity.equals(entity2))
+            return true;
+        else
+            return false;
+    }
 }

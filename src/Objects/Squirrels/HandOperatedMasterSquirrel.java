@@ -3,56 +3,50 @@ package Objects.Squirrels;
 import Logic.XY;
 import java.io.*;
 
-public class HandOperatedMasterSquirrel {
+class HandOperatedMasterSquirrel extends MasterSquirrel {
 
-    //TODO: check map borders exception
-    protected static XY nextPosition(XY currentPosition) {
-        int move = readDirection();
-        XY out = currentPosition;
-
+    static XY nextPosition(XY currentPosition) {
         while (true) {
-            if (move == -1)
-                move = readDirection();
-            else {
-                switch (move) {
-                    case 0:
-                        out.setY(currentPosition.getY() - 1);
-                        return out;
-                    case 1:
-                        out.setY(currentPosition.getY() + 1);
-                        return out;
-                    case 2:
-                        out.setX(currentPosition.getX() - 1);
-                        return out;
-                    case 3:
-                        out.setX(currentPosition.getX() + 1);
-                        return out;
-                    default:
-                        break;
-                }
+            int move = readDirection();
+            XY out = currentPosition;
+
+            switch (move) {
+                case 0:
+                    out.setY(currentPosition.getY() - 1);
+                    break;
+                case 1:
+                    out.setY(currentPosition.getY() + 1);
+                    break;
+                case 2:
+                    out.setX(currentPosition.getX() - 1);
+                    break;
+                case 3:
+                    out.setX(currentPosition.getX() + 1);
+                    break;
+                default:
+                    break;
             }
+
+            if (!(out.getX() < 0 || out.getY() < 0 || out.getX() > out.getxLength() || out.getY() > out.getyLength()) && move != -1)
+                return out;
         }
     }
 
-    @Override
-    public String toString() {
-        return "Objects.Squirrels.HandOperatedMasterSquirrel{} ";
-    }
-
     private static int readDirection() {
+        int out = -1;
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
             String puffer = in.readLine();
             char dir = puffer.toCharArray()[0];
             switch (dir) {
                 case 'w' | 'W':
-                    return 0;
+                    out = 0;
                 case 's' | 'S':
-                    return 1;
+                    out = 1;
                 case 'a' | 'A':
-                    return 2;
+                    out = 2;
                 case 'd' | 'D':
-                    return 3;
+                    out = 3;
                 default:
                     break;
             }
@@ -60,6 +54,6 @@ public class HandOperatedMasterSquirrel {
         catch(IOException e) {
             System.out.println("Please enter a valid sign.");
         }
-        return -1;
+        return out;
     }
 }

@@ -31,4 +31,11 @@ public class EntitySet {
     public Entity[] getEntities() {
         return entities;
     }
+
+    public void callNextStep() {
+        for (int i = 0; i < entities.length; i++) {
+            if (entities[i] != null)
+                entities[i].nextStep();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package Objects.Squirrels;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class MasterSquirrel extends Squirrels {
@@ -7,6 +8,16 @@ public class MasterSquirrel extends Squirrels {
 
     public MasterSquirrel() {
         this.defEnergy = 1000;
+        updateEnergy(defEnergy);
+        setId(getIDcount());
+        setXy(XY.generateStartPosition());
+    }
+
+    public MasterSquirrel(int energy, XY xy) {
+        this.defEnergy = 1000;
+        updateEnergy(energy);
+        setId(getIDcount());
+        setXy(xy);
     }
 
     public boolean isMiniSquirrel(Entity entity) {

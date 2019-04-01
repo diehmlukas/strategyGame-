@@ -1,5 +1,6 @@
 package Objects.Beasts;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class BadBeast extends Entity {
@@ -7,6 +8,16 @@ public class BadBeast extends Entity {
 
     public BadBeast() {
         this.defEnergy = -150;
+        updateEnergy(defEnergy);
+        setId(getIDcount());
+        setXy(XY.generateStartPosition());
+    }
+
+    public BadBeast(int energy, XY xy) {
+        this.defEnergy = -150;
+        updateEnergy(energy);
+        setId(getIDcount());
+        setXy(xy);
     }
 
     @Override
