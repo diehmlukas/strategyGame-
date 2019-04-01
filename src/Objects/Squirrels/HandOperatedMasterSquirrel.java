@@ -38,22 +38,27 @@ class HandOperatedMasterSquirrel extends MasterSquirrel {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
             String puffer = in.readLine();
             char dir = puffer.toCharArray()[0];
-            System.in.read();
+
             switch (dir) {
                 case 'w' | 'W':
                     out = 0;
+                    break;
                 case 's' | 'S':
                     out = 1;
+                    break;
                 case 'a' | 'A':
                     out = 2;
+                    break;
                 case 'd' | 'D':
                     out = 3;
+                    break;
                 default:
+                    System.out.println("Please enter a valid sign.");
                     break;
             }
         }
-        catch(IOException e) {
-            System.out.println("Please enter a valid sign.");
+        catch(Exception e) {
+            System.out.println("Your input has been rejected. Try again!");
         }
         return out;
     }

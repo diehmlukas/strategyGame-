@@ -32,8 +32,6 @@ public class Main {
             }
 
             entitySet.callNextStep();
-
-            System.in.read();
         }
 
     }
