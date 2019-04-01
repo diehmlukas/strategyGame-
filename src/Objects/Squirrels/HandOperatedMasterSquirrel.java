@@ -38,6 +38,7 @@ class HandOperatedMasterSquirrel extends MasterSquirrel {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
             String puffer = in.readLine();
             char dir = puffer.toCharArray()[0];
+            System.in.read();
             switch (dir) {
                 case 'w' | 'W':
                     out = 0;
