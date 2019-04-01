@@ -1,23 +1,16 @@
 package Objects.Plants;
 
-import Logic.XY;
 import Objects.Entities.Entity;
 
 public class BadPlant extends Entity {
     private final int defEnergy;
 
-    public BadPlant() {
-        this.defEnergy = -100;
-        updateEnergy(defEnergy);
-        setId(getIDcount());
-        setXy(XY.generateStartPosition());
-    }
-
-    public BadPlant(int energy, XY xy) {
+    public BadPlant(int energy, int id, int x, int y) {
         this.defEnergy = -100;
         updateEnergy(energy);
-        setId(getIDcount());
-        setXy(xy);
+        setId(id);
+        getXy().setX(x);
+        getXy().setY(y);
     }
 
     @Override
@@ -27,6 +20,6 @@ public class BadPlant extends Entity {
     public String toString() {
         return "BadPlant{" +
                 "defEnergy=" + defEnergy +
-                "} " + super.toString();
+                ", " + super.toString();
     }
 }

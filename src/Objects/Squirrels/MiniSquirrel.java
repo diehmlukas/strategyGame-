@@ -7,14 +7,14 @@ public class MiniSquirrel extends Squirrels {
         this.parentID = parentID;
     }
 
-    public int getParentID() {
-        return parentID;
-    }
-
     @Override
     public String toString() {
         return "MiniSquirrel{" +
                 ", parentID=" + parentID +
-                "} " + super.toString();
+                ", " + super.toString();
+    }
+
+    int getParentID() {
+        return parentID;
     }
 }
