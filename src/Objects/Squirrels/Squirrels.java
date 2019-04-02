@@ -7,11 +7,12 @@ import Objects.Plants.GoodPlant;
 public abstract class Squirrels extends Entity {
 
     public boolean checkTargetPosition(XY nextPosition, EntitySet entitySet) {
-        Entity entity = entitySet.onPosition(nextPosition);
-        if (entity instanceof GoodPlant && entity.getXy().getX() == nextPosition.getX()
-                && entity.getXy().getY() == nextPosition.getY())
-            return true;
-        else
-            return false;
+        for (int i = 0; i < entitySet.getEntities().length; i++) {
+            Entity entity = entitySet.getEntities()[i];
+            if (entity instanceof GoodPlant && entity.getXy().getX() == nextPosition.getX()
+                    && entity.getXy().getY() == nextPosition.getY())
+                return true;
+        }
+        return false;
     }
 }
