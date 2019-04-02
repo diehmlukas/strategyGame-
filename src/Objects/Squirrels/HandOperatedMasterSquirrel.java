@@ -12,7 +12,7 @@ public class HandOperatedMasterSquirrel extends MasterSquirrel {
     public XY nextPosition(XY currentPosition, EntitySet entitySet) {
         while (true) {
             int move = readDirection();
-            XY out = currentPosition;
+            XY out = new XY(currentPosition.getX(), currentPosition.getY());
 
             switch (move) {
                 case 0:
@@ -31,8 +31,10 @@ public class HandOperatedMasterSquirrel extends MasterSquirrel {
                     break;
             }
 
-
-            }
+            if ((out.getY() < 0 || out.getX() < 0 || out.getX() > out.getxLength() || out.getY() > out.getyLength()) && move != -1)
+                return currentPosition;
+            else
+                return out;
         }
     }
 

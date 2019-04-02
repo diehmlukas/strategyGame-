@@ -23,7 +23,7 @@ public class MasterSquirrel extends Squirrels {
 
     @Override
     public void nextStep() {
-        setXy(HandOperatedMasterSquirrel.nextPosition(getXy(), super.));
+        setXy(HandOperatedMasterSquirrel.nextPosition(getXy()));
     }
 
     @Override
