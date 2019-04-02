@@ -1,6 +1,6 @@
-package Objects.Squirrels;
+package de.hsa.games.fatsquirrel.core.objects.squirrels;
 
-import Logic.XY;
+import de.hsa.games.fatsquirrel.core.objects.XY;
 
 import java.io.*;
 

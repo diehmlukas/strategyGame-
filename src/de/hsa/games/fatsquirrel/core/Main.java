@@ -1,12 +1,12 @@
-package Logic;
+package de.hsa.games.fatsquirrel.core;
 
-import Objects.Beasts.BadBeast;
-import Objects.Beasts.GoodBeast;
-import Objects.Entities.EntitySet;
-import Objects.Plants.BadPlant;
-import Objects.Plants.GoodPlant;
-import Objects.Squirrels.MasterSquirrel;
-import Objects.Wall;
+import de.hsa.games.fatsquirrel.core.objects.beasts.BadBeast;
+import de.hsa.games.fatsquirrel.core.objects.beasts.GoodBeast;
+import de.hsa.games.fatsquirrel.core.objects.entities.EntitySet;
+import de.hsa.games.fatsquirrel.core.objects.plants.BadPlant;
+import de.hsa.games.fatsquirrel.core.objects.plants.GoodPlant;
+import de.hsa.games.fatsquirrel.core.objects.squirrels.MasterSquirrel;
+import de.hsa.games.fatsquirrel.core.objects.Wall;
 
 public class Main {
     public static void main(String[] args) {

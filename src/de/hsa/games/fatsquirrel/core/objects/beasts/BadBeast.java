@@ -1,7 +1,7 @@
-package Objects.Beasts;
+package de.hsa.games.fatsquirrel.core.objects.beasts;
 
-import Logic.XY;
-import Objects.Entities.Entity;
+import de.hsa.games.fatsquirrel.core.objects.XY;
+import de.hsa.games.fatsquirrel.core.objects.entities.Entity;
 
 public class BadBeast extends Entity {
     private final int defEnergy;

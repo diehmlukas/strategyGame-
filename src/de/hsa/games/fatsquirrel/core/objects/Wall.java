@@ -1,7 +1,6 @@
-package Objects;
+package de.hsa.games.fatsquirrel.core.objects;
 
-import Logic.XY;
-import Objects.Entities.Entity;
+import de.hsa.games.fatsquirrel.core.objects.entities.Entity;
 
 public class Wall extends Entity {
     private final int defEnergy;

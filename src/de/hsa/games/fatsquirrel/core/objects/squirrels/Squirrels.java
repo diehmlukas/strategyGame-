@@ -1,8 +1,9 @@
-package Objects.Squirrels;
+package de.hsa.games.fatsquirrel.core.objects.squirrels;
 
-import Logic.XY;
-import Objects.Entities.*;
-import Objects.Plants.GoodPlant;
+import de.hsa.games.fatsquirrel.core.objects.XY;
+import de.hsa.games.fatsquirrel.core.objects.entities.Entity;
+import de.hsa.games.fatsquirrel.core.objects.entities.EntitySet;
+import de.hsa.games.fatsquirrel.core.objects.plants.GoodPlant;
 
 public abstract class Squirrels extends Entity {
     @Override

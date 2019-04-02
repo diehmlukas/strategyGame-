@@ -1,7 +1,7 @@
-package Objects.Squirrels;
+package de.hsa.games.fatsquirrel.core.objects.squirrels;
 
-import Logic.XY;
-import Objects.Entities.Entity;
+import de.hsa.games.fatsquirrel.core.objects.XY;
+import de.hsa.games.fatsquirrel.core.objects.entities.Entity;
 
 public class MasterSquirrel extends Squirrels {
     private final int defEnergy;

@@ -1,6 +1,6 @@
-package Objects.Entities;
+package de.hsa.games.fatsquirrel.core.objects.entities;
 
-import Logic.XY;
+import de.hsa.games.fatsquirrel.core.objects.XY;
 
 public abstract class Entity {
     private int id;

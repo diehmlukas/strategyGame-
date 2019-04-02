@@ -1,4 +1,4 @@
-package Objects.Squirrels;
+package de.hsa.games.fatsquirrel.core.objects.squirrels;
 
 public class MiniSquirrel extends Squirrels {
     private final int parentID;

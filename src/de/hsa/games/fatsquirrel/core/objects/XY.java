@@ -1,4 +1,4 @@
-package Logic;
+package de.hsa.games.fatsquirrel.core.objects;
 
 import java.util.Random;
 
@@ -31,7 +31,7 @@ public final class XY {
 
     @Override
     public String toString() {
-        return "Logic.XY{" +
+        return "XY{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

@@ -1,7 +1,7 @@
-package Objects.Plants;
+package de.hsa.games.fatsquirrel.core.objects.plants;
 
-import Logic.XY;
-import Objects.Entities.Entity;
+import de.hsa.games.fatsquirrel.core.objects.XY;
+import de.hsa.games.fatsquirrel.core.objects.entities.Entity;
 
 public class BadPlant extends Entity {
     private final int defEnergy;

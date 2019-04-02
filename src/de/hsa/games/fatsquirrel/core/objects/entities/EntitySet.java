@@ -1,4 +1,4 @@
-package Objects.Entities;
+package de.hsa.games.fatsquirrel.core.objects.entities;
 
 public class EntitySet {
     private int arraySize;
