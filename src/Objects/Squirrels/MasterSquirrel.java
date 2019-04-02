@@ -18,15 +18,12 @@ public class MasterSquirrel extends Squirrels {
     }
 
     public boolean isMiniSquirrel(Entity entity) {
-        if (entity instanceof MiniSquirrel && ((MiniSquirrel) entity).getParentID() == getID())
-            return true;
-        else
-            return false;
+        return  (entity instanceof MiniSquirrel && ((MiniSquirrel) entity).getParentID() == getID());
     }
 
     @Override
     public void nextStep() {
-        setXy(HandOperatedMasterSquirrel.nextPosition(getXy()));
+        setXy(HandOperatedMasterSquirrel.nextPosition(getXy(), super.));
     }
 
     @Override

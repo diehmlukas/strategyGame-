@@ -1,5 +1,7 @@
 package Objects.Entities;
 
+import Logic.XY;
+
 public class EntitySet {
     private int arraySize;
     private Entity[] entities;
@@ -17,7 +19,7 @@ public class EntitySet {
             entities[count] = entity;
         }
         catch (ArrayIndexOutOfBoundsException a){
-            System.out.println("Too many bad beats! Your new beast has been ignored.");
+            System.out.println("Too many objects! Your new object has been ignored.");
         }
     }
 
@@ -37,5 +39,13 @@ public class EntitySet {
             if (entities[i] != null)
                 entities[i].nextStep();
         }
+    }
+
+    public Entity onPosition(XY xy) {
+        for (int i = 0; i < entities.length; i++) {
+            if (entities[i].getXy().equals(xy))
+                return entities[i];
+        }
+        return null;
     }
 }

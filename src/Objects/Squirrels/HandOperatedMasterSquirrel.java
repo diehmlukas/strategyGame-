@@ -1,11 +1,15 @@
 package Objects.Squirrels;
 
 import Logic.XY;
+import Objects.Entities.Entity;
+import Objects.Entities.EntitySet;
+import Objects.Plants.GoodPlant;
+
 import java.io.*;
 
-class HandOperatedMasterSquirrel extends MasterSquirrel {
+public class HandOperatedMasterSquirrel extends MasterSquirrel {
 
-    static XY nextPosition(XY currentPosition) {
+    public XY nextPosition(XY currentPosition, EntitySet entitySet) {
         while (true) {
             int move = readDirection();
             XY out = currentPosition;
@@ -27,8 +31,8 @@ class HandOperatedMasterSquirrel extends MasterSquirrel {
                     break;
             }
 
-            if (!(out.getX() < 0 || out.getY() < 0 || out.getX() > out.getxLength() || out.getY() > out.getyLength()) && move != -1)
-                return out;
+
+            }
         }
     }
 
