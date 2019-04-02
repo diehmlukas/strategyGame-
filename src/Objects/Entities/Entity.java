@@ -11,16 +11,14 @@ public abstract class Entity {
         return xy;
     }
 
-    public void nextStep() {
-        xy.generateNewPosition();
-    }
+    public abstract void nextStep();
 
     @Override
     public String toString() {
         return "energy=" + energy +
                 ", id=" + id +
-                ", x=" + xy.getX() +
-                ", y=" + xy.getY() +
+                ", x=" + xy.x +
+                ", y=" + xy.y +
                 '}';
     }
 

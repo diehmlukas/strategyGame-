@@ -1,5 +1,6 @@
 package Objects.Beasts;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class BadBeast extends Entity {
@@ -9,8 +10,13 @@ public class BadBeast extends Entity {
         this.defEnergy = -150;
         updateEnergy(energy);
         setId(id);
-        getXy().setX(x);
-        getXy().setY(y);
+        XY xy = new XY(x, y);
+        setXy(xy);
+    }
+
+    @Override
+    public void nextStep() {
+        getXy().generateNewPosition();
     }
 
     @Override

@@ -1,5 +1,6 @@
 package Objects.Squirrels;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class MasterSquirrel extends Squirrels {
@@ -9,8 +10,8 @@ public class MasterSquirrel extends Squirrels {
         this.defEnergy = 1000;
         updateEnergy(energy);
         setId(id);
-        getXy().setX(x);
-        getXy().setY(y);
+        XY xy = new XY(x, y);
+        setXy(xy);
     }
 
     MasterSquirrel() {

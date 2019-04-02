@@ -8,13 +8,18 @@ public class MiniSquirrel extends Squirrels {
     }
 
     @Override
+    public void nextStep() {
+        getXy().generateNewPosition();
+    }
+
+    @Override
     public String toString() {
         return "MiniSquirrel{" +
                 ", parentID=" + parentID +
                 ", " + super.toString();
     }
 
-    int getParentID() {
+    public int getParentID() {
         return parentID;
     }
 }

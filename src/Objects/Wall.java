@@ -1,5 +1,6 @@
 package Objects;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class Wall extends Entity {
@@ -9,8 +10,8 @@ public class Wall extends Entity {
         this.defEnergy = -10;
         updateEnergy(energy);
         setId(id);
-        getXy().setX(x);
-        getXy().setY(y);
+        XY xy = new XY(x, y);
+        setXy(xy);
     }
 
     @Override

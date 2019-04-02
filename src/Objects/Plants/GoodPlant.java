@@ -1,5 +1,6 @@
 package Objects.Plants;
 
+import Logic.XY;
 import Objects.Entities.Entity;
 
 public class GoodPlant extends Entity {
@@ -9,8 +10,8 @@ public class GoodPlant extends Entity {
         this.defEnergy = 100;
         updateEnergy(energy);
         setId(id);
-        getXy().setX(x);
-        getXy().setY(y);
+        XY xy = new XY(x, y);
+        setXy(xy);
     }
 
     @Override
