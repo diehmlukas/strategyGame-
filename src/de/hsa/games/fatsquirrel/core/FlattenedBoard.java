@@ -1,5 +1,5 @@
 package de.hsa.games.fatsquirrel.core;
 
-public class FlattenedBoard {
+public class FlattenedBoard implements EntityContext{
 
 }
